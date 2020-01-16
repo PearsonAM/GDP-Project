@@ -1,0 +1,38 @@
+---
+title: "GDP Data Vis"
+author: "Alexis Pearson"
+date: "1/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, include=FALSE}
+rm(list=ls()) 
+#install.packages("ggplot2")
+#install.packages("ipumsr")
+#install.packages("sf")
+library(tidyverse)
+library(foreign)
+library(moments)
+library(ggplot2)
+library(readxl)
+
+```
+
+```{r load excel, include= FALSE}
+GDPComparisons<- read_excel("GDP Comparisons.xls", sheet=2)
+GDP_NC<- read_excel("GDP Comparisons.xls", sheet=5)
+GDP_Midwest<- read_excel("GDP Comparisons.xls", sheet=6)
+GDP_MI<- read_excel("GDP Comparisons.xls", sheet=7)
+GDP_IL<- read_excel("GDP Comparisons.xls", sheet=8)
+GDP_OH<- read_excel("GDP Comparisons.xls", sheet=9)
+GDP_IA<- read_excel("GDP Comparisons.xls", sheet=10)
+```
+
+```{GDP data vis, include = FALSE}
+ggplot(data=GDP_Midwest, aes(x=GeoName, y=GeoFips,))
+
+```
