@@ -32,6 +32,21 @@ GDP_OH<- read_excel("GDP Comparisons.xls", sheet=9)
 GDP_IA<- read_excel("GDP Comparisons.xls", sheet=10)
 ```
 
+
+```{r load excel2, include= False}
+
+Inc_Con_Em<- read_excel("Income_Consumption_Employment.xls", sheet=2)
+DispInc<- read_excel("Income_Consumption_Employment.xls", sheet=3)
+Compensation<- read_excel("Income_Consumption_Employment.xls", sheet=4)
+Econprofile<- read_excel("Income_Consumption_Employment.xls", sheet=5)
+personalcons<- read_excel("Income_Consumption_Employment.xls", sheet=6)
+percapitacons<- read_excel("Income_Consumption_Employment.xls", sheet=7)
+
+
+```
+
+
+
 ```{GDP data vis, include = FALSE}
 ggplot(data=GDP_Midwest, aes(x=GeoName, y=GeoFips,))
 
